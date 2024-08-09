@@ -1,0 +1,566 @@
+/*
+ * __        __          _                  ____  _         _       
+ * \ \      / /_ _ _   _| |__   __ _ _ __  / ___|| |_ _   _| | ___  
+ *  \ \ /\ / / _` | | | | '_ \ / _` | '__| \___ \| __| | | | |/ _ \ 
+ *   \ V  V / (_| | |_| | |_) | (_| | |     ___) | |_| |_| | |  __/ 
+ *    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    |____/ \__|\__, |_|\___| 
+ *                 |___/                              |___/         
+ *  
+ * by Stephan Raabe (2023) 
+ * ----------------------------------------------------- 
+*/
+
+/* -----------------------------------------------------
+ * Import Pywal colors 
+ * ----------------------------------------------------- */
+@import '/home/alan/.cache/wal/colors-waybar.css';
+
+@define-color backgroundlight @color8;
+@define-color backgrounddark @color1;
+@define-color workspacesbackground1 @color5;
+@define-color workspacesbackground2 @color11;
+@define-color bordercolor @color10;
+@define-color textcolor1 #FFFFFF;
+@define-color textcolor2 #000000;
+@define-color textcolor3 #FFFFFF;
+@define-color iconcolor #FFFFFF;
+@define-color mycolor0 @color0;
+@define-color mycolor1 @color1;
+@define-color mycolor2 @color2;
+@define-color mycolor3 @color3;
+@define-color mycolor4 @color4;
+@define-color mycolor5 @color5;
+@define-color mycolor6 @color6;
+@define-color mycolor7 @color7;
+@define-color mycolor8 @color8;
+/* -----------------------------------------------------
+ * General 
+ * ----------------------------------------------------- */
+
+
+/* -----------------------------------------------------
+ * Workspaces  line: 437
+ * ----------------------------------------------------- */
+
+ #workspaces {
+    padding-left: 0px;
+    margin: 0px 10px 0px 10px;
+}
+
+
+/* -----------------------------------------------------
+ * Tooltips
+ * ----------------------------------------------------- */
+
+tooltip {
+    font-family: 'NotoSansMono';
+    border-radius: 300px;
+    border-width: 4px;
+    background-color: @mycolor0;
+    opacity:0.9;
+}
+
+tooltip label {
+    font-size: 15px;
+    font-family: 'FiraCode';
+    color: @mycolor4;
+}
+
+/* -----------------------------------------------------
+ * Custom Quicklinks
+ * ----------------------------------------------------- */
+
+#custom-brave, 
+#custom-browser, 
+#custom-keybindings,
+#custom-outlook, 
+#custom-filemanager, 
+#custom-teams, 
+#custom-chatgpt, 
+#custom-calculator, 
+#custom-windowsvm, 
+#custom-cliphist, 
+#custom-wallpaper, 
+#custom-settings, 
+#custom-wallpaper, 
+#custom-system,
+
+#custom-settings {
+    margin-right: 5;
+    margin-left: 5;
+}
+
+#custom-browser {
+    margin-right: 0;
+}
+
+#custom-wallpaper {
+    margin-right: 0;
+}
+
+#custom-chatgpt {
+    margin-right: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 0;
+}
+
+#custom-waybarthemes,#custom-system {
+    margin-left: 10;
+    margin-right: 10;
+}
+
+
+#custom-ml4w-welcome {
+    margin-right: 0;
+    background-image: url("../assets/ml4w-icon-20.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 0;
+}
+
+#custom-ml4w-hyprland-settings {
+    padding-left: 10px;
+    color: @mycolor6;
+    padding-right: 10px;
+    background-image: url("../assets/hyprland-icon-20.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* -----------------------------------------------------
+ * Idle Inhibator
+ * ----------------------------------------------------- */
+
+
+/* -----------------------------------------------------
+ * Custom Modules
+ * ----------------------------------------------------- */
+
+#custom-appmenuicon {
+    font-size: 18px;
+    color: @mycolor0;
+    margin: 0px 10px 0px 10px;
+}
+
+/* -----------------------------------------------------
+ * Custom Exit
+ * ----------------------------------------------------- */
+
+#custom-exit {
+    margin: 0px 0px 0px 0px;
+    padding:0px;
+    font-size:16px;
+    color: @iconcolor;
+}
+
+/* -----------------------------------------------------
+ * Custom Updates
+ * ----------------------------------------------------- */
+
+#custom-updates {
+    font-size: 16px;
+    color: @textcolor;
+     border-radius: 5px;
+    margin: 0px 0px 0px 0px;
+}
+
+#custom-updates.green {
+}
+
+#custom-updates.yellow {
+    color: #ff9a3c;
+}
+
+#custom-updates.red {
+    color: #dc2f2f;
+}
+
+/* -----------------------------------------------------
+ * Custom Youtube
+ * ----------------------------------------------------- */
+
+#custom-youtube {
+    background-color: @backgroundlight;
+    font-size: 14px;
+    color: @textcolor2;
+     border-radius: 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+/* -----------------------------------------------------
+ * Hardware Group
+ * ----------------------------------------------------- */
+
+ #disk,#memory,#cpu,#language {
+    margin:0px;
+    padding:0px;
+    font-size:14px;
+    color:@iconcolor;
+}
+
+#language {
+    margin-right: 0;
+}
+/* -----------------------------------------------------
+ * Network
+ * ----------------------------------------------------- */
+
+#network {
+    font-size: 14px;
+    color: @textcolor;
+     border-radius: 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+#network.ethernet {
+    color: @textcolor;
+}
+
+#network.wifi {
+    color: @textcolor;
+}
+
+/* -----------------------------------------------------
+ * Bluetooth
+ * ----------------------------------------------------- */
+
+ #bluetooth, #bluetooth.on, #bluetooth.connected {
+    font-size: 14px;
+    color: @textcolor;
+     border-radius: 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+#bluetooth.off {
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* -----------------------------------------------------
+ * Battery
+ * ----------------------------------------------------- */
+
+/* -----------------------------------------------------
+ * Tray
+ * ----------------------------------------------------- */
+
+#tray {
+    margin:0px 0px 0px 0px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+/* -----------------------------------------------------
+ * Other
+ * ----------------------------------------------------- */
+
+label:focus {
+    background-color: #ff9a3c;
+}
+
+#backlight {
+    background-color: #90b1b1;
+}
+
+
+/* -----------------------------------------------------
+ * Other from default waybar theme...
+ * ----------------------------------------------------- */
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: FiraCode, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+window#waybar {
+    background-color: @mycolor2;
+    opacity: 1;
+    border-radius: 400px;
+    border-top: 1px solid @mycolor0;
+    border-bottom: 1px solid @mycolor4;
+    /* color: #ffffff; */
+    transition-property: background-color;
+    transition-duration: .2s;
+}
+
+window#waybar.hidden {
+    opacity: 1;
+}
+
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+#custom-ml4w-welcome {
+    margin-right: 5px;
+    background-image: url("../assets/ml4w-icon-20.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-right: 0px;
+}
+
+
+#workspaces button {
+    padding: 0 0px;
+    /* background-color: rgba(0, 0, 0, 1); */
+    color: @mycolor0;
+    margin-right: 0px;
+}
+
+#workspaces button:hover {
+    padding: 0px 10px;
+    color: @mycolor7;
+    background: @mycolor0;
+}
+
+#workspaces button.focused {
+    background-color: @mycolor6;
+    /* background: rgba(0, 0, 0, 0.9); */
+    box-shadow: inset 10 -9px #ffffff;
+}
+
+#workspaces button.active {
+    color: @mycolor5;
+    background: @mycolor0;
+    padding: 0px 0px;
+    margin-left: 0px;
+    box-shadow: inset 0 -2px @mycolor0;
+    /* box-shadow: inset 0 -3px @mycolor2; */
+    transition-property: background-color;
+    transition-duration: .4s;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+
+#clock,
+#myclock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
+    padding: 0 10px;
+    color: #ffffff;
+}
+
+#clock {
+    font-size: 16px;
+    margin: 0;
+    margin-right: 2;
+    background-color: #000000;
+    /* border-top: 1px solid @mycolor5; */
+    border-bottom: 2px solid @mycolor4;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+#myclock {
+    font-size: 10px;
+    margin: 0;
+    margin-right: 20;
+    background-color: #000000;
+    /* border-top: 1px solid @mycolor5; */
+    border-bottom: 2px solid @mycolor4;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+#battery {
+    background-color: rgba(255,255,255,0.7);
+    font-size: 15px;
+    color: #000000;
+}
+
+#battery.charging, #battery.plugged {
+    color: @mycolor2;
+    background-color: @mycolor0;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: #9b59b6;
+}
+
+#cpu {
+    background-color: #2ecc71;
+    color: #000000;
+}
+
+#memory {
+    background-color: #9b59b6;
+}
+
+#disk {
+    background-color: #964B00;
+}
+
+#backlight {
+    background-color: #90b1b1;
+}
+
+#network {
+    background-color: #2980b9;
+}
+
+#network.disconnected {
+    background-color: #f53c3c;
+}
+
+#pulseaudio {
+    background-color: @mycolor2;
+    color: #000000;
+    font-size: 16px;
+    border-top: 1px solid @mycolor0;
+    border-bottom: 1px solid @mycolor4;
+}
+
+#pulseaudio.muted {
+    background-color: #90b1b1;
+    color: #2a5c45;
+}
+
+#wireplumber {
+    background-color: #fff0f5;
+    color: #000000;
+}
+
+#wireplumber.muted {
+    background-color: #f53c3c;
+}
+
+#custom-media {
+    background-color: #66cc99;
+    color: #2a5c45;
+    min-width: 100px;
+}
+
+#custom-media.custom-spotify {
+    background-color: #66cc99;
+}
+
+#custom-media.custom-vlc {
+    background-color: #ffa000;
+}
+
+#temperature {
+    background-color: #f0932b;
+}
+
+#temperature.critical {
+    background-color: #eb4d4b;
+}
+
+#tray {
+    background-color: #2980b9;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+#idle_inhibitor {
+    background-color: #2d3436;
+    border-top: 1px solid @mycolor0;
+    border-bottom: 1px solid @mycolor4;
+}
+
+#idle_inhibitor.activated {
+    background-color: #ecf0f1;
+    color: #2d3436;
+}
+
+#mpd {
+    background-color: #66cc99;
+    color: #2a5c45;
+}
+
+#mpd.disconnected {
+    background-color: #f53c3c;
+}
+
+#mpd.stopped {
+    background-color: #90b1b1;
+}
+
+#mpd.paused {
+    background-color: #51a37a;
+}
+
+#language {
+    background: #00b093;
+    color: #740864;
+    padding: 0 5px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state {
+    background: #97e1ad;
+    color: #000000;
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad.empty {
+	background-color: transparent;
+}
